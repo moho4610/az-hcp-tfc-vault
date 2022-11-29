@@ -207,7 +207,47 @@ provider "azurerm" {
 ## Vault Cloud 
 ![f1](readme_Images/Vault_VerticalLogo_FullColor.png)
 
-Vault is being used in some terraform deployments in this repo.
+HashiCorp Vault Cloud is bieng used in conjunction with Terraform Cloud in the *function-app* terraform deploymentm see below example:
+
+**EXAMPLE: /function-app/env-config/dev/provider.tf.**
+--
+
+```
+terraform {
+  cloud {
+    organization = "az-terra-lab"
+
+    workspaces {
+      name = "az-meltaier-function-dev"
+    }
+  }
+}
+
+
+provider "azurerm" {
+  features {}
+
+  subscription_id = var.subscription_id
+  client_id       = data.vault_generic_secret.azure_spn.data.client_id
+  client_secret   = data.vault_generic_secret.azure_spn.data.client_secret
+  tenant_id       = var.tenant_id
+}
+
+
+provider "vault" {}
+
+data "vault_generic_secret" "azure_spn" {
+  path = "azure-meltaier/creds/meltaier-root"
+}
+
+output "HelloDev" {
+  value = "HelloFromDev"
+}
+
+```
+Notice that neither VAULT_ADDR or VAULT_TOKEN were declared within the provider "vault" block. Both of these values are instead set as environment variables in the respective Terrafrom Cloud Worksapce, in this example it is "az-meltaier-function-dev" workspace in which the environment variables are set using *Terraform Cloud Variable Sets.*
+
+---
 
 The following steps were followed to create a token that can be used by Terraform Cloud:
 
@@ -226,7 +266,7 @@ The following steps were followed to create a token that can be used by Terrafor
 
 `export ARM_SUBSCRIPTION_ID="Insert Subscription ID of your Azure 'Subscription Vending' Subscription"`
 
-'
+
 **2. Enable azure secret engine and mount it to default azure URL**
 
 
