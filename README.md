@@ -468,7 +468,7 @@ stages:
 3. plan.yaml - This YAML contains plan steps
 4. deploy.yaml - This YAML contains apply steps
 
-This design ensures there is a centralised process for deploying and augmenting terraform resources. All the downstream pipeline templates are kept here - https://dev.azure.com/arq-poc-meltaier/az-terra-landingzone/_git/shared-pipeline-templates
+This design ensures there is a centralised process for deploying and augmenting terraform resources. All the downstream pipeline templates are kept here - https://github.com/moho4610/az-hcp-tfc-vault-pipelinetemplates.git
 
 ### **<Terraform_Resource_Definition_Files>.tf**
 This file should contain the definitions of all the resources you wish to deploy.
