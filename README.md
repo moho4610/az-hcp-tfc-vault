@@ -21,12 +21,6 @@ The codebase is not based on a single opinionated super terraform module (e.g CA
 # Repo Structure for Terraform and YAML files(Azure DevOps Pipeline).
 ![f1](readme_Images/repoconfig1.png)
 
-# Repo Structure for Terraform and YAML files(Azure DevOps Pipeline).
-![f1](readme_Images/repoconfig2.png)
-
-# Repo Structure for Terraform and YAML files(Azure DevOps Pipeline).
-![f1](readme_Images/repoconfig1.png)
------
 
 # Table of Contents
   - [Technology Stack](#technology-stack)
