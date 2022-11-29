@@ -1,0 +1,47 @@
+name: pipeline-az-meltaier-landing-zone-rgroups-platform
+
+## In this parameter block we are asking the user to define an Azure Devops Environment if the build is to be triggered manually. Default is set to env_dev
+parameters:
+  - name: tfcloudenvironment
+    displayName: Choose from the below available Terraform Cloud Environments
+    type: string
+    default: az-terra-lab
+    values:
+    - az-terra-lab
+
+trigger:
+  batch: false
+  branches:
+    include:
+      - main
+      - dev
+  paths:
+    include:
+      - '/resourcegroups/platform/*'
+
+
+## Declare external repo which holds pipeline template files
+resources:
+  repositories:
+    - repository: shared-pipelines
+      name: shared-pipeline-templates      ## Reference the name of repository which holds your pipeline YAML files.
+      type: git
+      ref: main
+
+
+
+variables:
+- template: pipeline-globalvars.yaml@shared-pipelines
+- group: ${{ parameters.tfcloudenvironment }} # Must enter your Azure Devops Variable Group here that contains your TFC Team API Key
+
+stages:
+##---------------------------------------------##
+## Route to main pipeline templates           ##
+##---------------------------------------------##
+  
+  - template: entrypoint.yaml@shared-pipelines
+    parameters: 
+      tflocation: resourcegroups/platform
+      environment: ${{ parameters.tfcloudenvironment }}
+
+  
