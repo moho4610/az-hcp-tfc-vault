@@ -13,9 +13,13 @@ This repository contains the logic & information to guide you through building c
 
 Azure DevOps (YAML) will be used to orchestrate multi-stage Azure DevOps pipelines which trigger a number of Terraform CLI workflows to run in Terraform Cloud. 
   
-The codebase is not based on a single opinionated super terraform module, it was instead developed in a format that simplifies the composition of a personalized customized azure cloud landing zone which can be later molded into a super-module if required. 
-  
+The codebase is not based on a single opinionated super terraform module (e.g CAF AzureRM Super Module), it was instead developed in a simpler modular format to simplify the composition of new customized azure cloud landing zone which can be later molded into a super-module if required.  The intention of this repo is to also demonstrate the effectiveness of HCP Vault, Terraform Cloud and Azure DevOps together.
+
+# CI-CD Config
 ![f1](readme_Images/highlevelworkflow.png)
+
+## Repo Structure for Terraform and YAML files(Azure DevOps Pipeline).
+![f1](readme_Images/repoconfig1.png)
 
 -----
 
@@ -228,6 +232,8 @@ The following steps were followed to create a token that can be used by Terrafor
 
 `vault secrets enable -path=azure-meltaier -description="Dynamic Service Principal Creation in Azure!" -max-lease-ttl=1h -default-lease-ttl=1h azure`
 
+![f1](readme_Images/vaultengine.png)
+
 **3. Define the service account (SPN) which will be used by HCP Vault to generate temp creds**
 
 `vault write azure-meltaier/config \tenant_id="${ARM_TENANT_ID}" subscription_id="${ARM_SUBSCRIPTION_ID}" client_id="${ARM_CLIENT_ID}" client_secret="${ARM_CLIENT_SECRET}"`
@@ -275,6 +281,8 @@ path "auth/token/*" {
   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
 }
 ```
+![f1](readme_Images/vaultacl.png)
+
 
 **7. Create an independent(Orphan) token to use for Terraform Cloud deployment**
 
