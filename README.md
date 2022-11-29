@@ -57,8 +57,17 @@ Prerequisites:
 
 - **STEP 3:** Create an Azure Subscription to use for 'vending' out the initial set of subscriptions and Management Groups
 
-- **STEP 4:** Create an Azure Service Principal and grant it permissions per the instructions in the following page:
-https://developer.hashicorp.com/vault/tutorials/secrets-management/azure-secrets
+- **STEP 4:** Create an Azure Service Principal and grant it permissions:
+  
+    
+
+*Create an Azure service principal (no need to create resource group, refer to [Vault Cloud](#vault-cloud) below to set the scope higher; management group) - https://developer.hashicorp.com/vault/tutorials/secrets-management/azure-secrets#create-an-azure-service-principal-and-resource-group*
+
+*Enable the Azure secrets engine - https://developer.hashicorp.com/vault/tutorials/secrets-management/azure-secrets#enable-the-azure-secrets-engine*
+
+*Configure the Azure secrets engine - https://developer.hashicorp.com/vault/tutorials/secrets-management/azure-secrets#configure-the-azure-secrets-engine*
+
+****************************************
 
  Note that if you wish to create other subscriptions using this service principal, you will also need to give it adminstrative permissions to your Azure billing account, as below:
 
@@ -74,9 +83,10 @@ https://developer.hashicorp.com/vault/tutorials/secrets-management/azure-secrets
 
 **IMPORTANT NOTE**: Using dynamic secrets to create Azure Subscriptions hasn't been tested. Creating subscriptions using static credentials has only been tested.
 
+***********
 ## Azure Devops - CI Tool 
 ![f1](readme_Images/azdevopslogo.png)
-
+**************
 You will need to create a new Azure DevOps Org or login into an existing one. You will then need to create a new Project, then fork the below repos:
 
 https://github.com/moho4610/az-hcp-tfc-vault.git
@@ -210,9 +220,10 @@ provider "azurerm" {
   tenant_id       = var.adminsvcprincipal_tenant_id
 }
 ```
+******************
 ## Vault Cloud 
 ![f1](readme_Images/Vault_VerticalLogo_FullColor.png)
-
+************************
 HashiCorp Vault Cloud is bieng used in conjunction with Terraform Cloud in the *function-app* terraform deployment see below example:
 
 **EXAMPLE: /function-app/env-config/dev/provider.tf.**
