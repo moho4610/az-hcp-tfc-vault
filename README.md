@@ -14,7 +14,13 @@ This repository contains the logic & information to guide you through building c
 
 Azure DevOps (YAML) will be used to orchestrate multi-stage Azure DevOps pipelines which trigger a number of Terraform CLI workflows to run in Terraform Cloud. 
   
-The codebase is not based on a single opinionated super terraform module (e.g CAF AzureRM Super Module), it was instead developed in a simpler modular format to simplify the composition of new customized azure cloud landing zones. The intention of this repo is to also demonstrate the effectiveness of HCP Vault, Terraform Cloud and Azure DevOps together from an operational, governance & security perspective.
+The codebase is not based on a single opinionated super terraform module (e.g CAF AzureRM Super Module), it was instead developed in a simpler modular format to simplify the composition of new customized azure cloud landing zones. 
+
+The intention of this repo is to also demonstrate the effectiveness of HCP Vault, Terraform Cloud and Azure DevOps together from an operational, governance & security perspective. The codebase does not require that you deploy the resources all at once, instead you can deploy the resources using the respective YAML file for each resource type folder. It is recommended that you deploy the resources in the following order:
+- subscriptions
+- management groups
+- resourcegroups
+- ....then you can deploy other resources accordingly.
 
 # CI-CD Config
 ![f1](readme_Images/highlevelworkflow.png)
