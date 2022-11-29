@@ -207,7 +207,7 @@ provider "azurerm" {
 ## Vault Cloud 
 ![f1](readme_Images/Vault_VerticalLogo_FullColor.png)
 
-HashiCorp Vault Cloud is bieng used in conjunction with Terraform Cloud in the *function-app* terraform deploymentm see below example:
+HashiCorp Vault Cloud is bieng used in conjunction with Terraform Cloud in the *function-app* terraform deployment see below example:
 
 **EXAMPLE: /function-app/env-config/dev/provider.tf.**
 --
