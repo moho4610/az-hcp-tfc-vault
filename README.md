@@ -52,7 +52,7 @@ Prerequisites:
 - **STEP 3:** Create an Azure Subscription to use for 'vending' out the initial set of subscriptions and Management Groups
 
 - **STEP 4:** Create an Azure Service Principal and grant it permissions per the instructions in the following page:
-https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal
+https://developer.hashicorp.com/vault/tutorials/secrets-management/azure-secrets
 
  Note that if you wish to create other subscriptions using this service principal, you will also need to give it adminstrative permissions to your Azure billing account, as below:
 
