@@ -30,6 +30,8 @@ To setup the Azure DevOps tooling you will also need to have access to ['az-hcp-
 # Repo Structure for Terraform and YAML files(Azure DevOps Pipeline).
 ![f1](readme_Images/repoconfig1.png)
 
+# Demo Azure Landing Zone - Reference Design
+ ![f1](readme_Images/refarchaz.png)
 
 # Table of Contents
   - [Technology Stack](#technology-stack)
