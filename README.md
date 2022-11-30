@@ -56,7 +56,7 @@ To setup the Azure DevOps tooling you will also need to have access to ['az-hcp-
       - [Setup your terraform workspace](#setup-your-tf-cloud-workspaces)
       - [Set up your terraform and pipeline files](#set-up-your-terraform-and-pipeline-files)
       - [Deploy your pipeline in Azure DevOps Dashboard](#deploy-your-pipeline-in-azure-devops-dashboard)
-
+  - [Notifications & Approvals By Email or Phone(Slack App)](#notifications--slack-integration)
 
 -----
 
@@ -628,7 +628,7 @@ When deploying your pipelines in Azure DevOps, select 'Existing Azure Pipelines 
 
 ![f1](readme_Images/deployyaml.png)
 
-## Email Notifications & Slack Integration
+## Notifications & Slack Integration
 
 By default Azure sends approvers requests by sending an email directly to their email address. Slack integration allows you and your team to be notified directly in your messaging app so you can approve or deny runs from any device running Slack App.
 
