@@ -66,9 +66,11 @@ This section covers all the different technologies in use and basic instructions
 Prerequisites:
 - **STEP 1:** Go to https://app.terraform.io/ and create a free TF Cloud Account. Then log in to your Tf Cloud Org >> Settings >> API Tokens >> Create a user Token and save it somewhere.
 
-- **STEP 2:** Create an Azure Keyvault in your Azure Sub, and create a secret in it called 'tfcloud-user-token', then copy over the secret value you created from Step 1. 
+- **STEP 2:** Create an Azure Subscription to use for 'vending' out the initial set of subscriptions and Management Groups
 
-- **STEP 3:** Create an Azure Subscription to use for 'vending' out the initial set of subscriptions and Management Groups
+- **STEP 3:** Create an Azure Keyvault in your Azure Sub, and create a secret in it called 'tfcloud-user-token', then copy over the secret value you created from Step 1. 
+
+
 
 - **STEP 4:** Create an Azure Service Principal and grant it permissions:
   
