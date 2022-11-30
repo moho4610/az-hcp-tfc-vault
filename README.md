@@ -277,7 +277,7 @@ output "HelloDev" {
 }
 
 ```
-Notice that neither VAULT_ADDR or VAULT_TOKEN were declared within the provider "vault" block. Both of these values are instead set as environment variables in the respective Terrafrom Cloud Worksapce, in this example it is "az-meltaier-function-dev" workspace in which the environment variables are set using *Terraform Cloud Variable Sets.*
+Notice that neither VAULT_ADDR or VAULT_TOKEN were declared within the provider "vault" block. Both of these values are instead set as environment variables in the respective Terrafrom Cloud Workspace, in this example it is "az-meltaier-function-dev" workspace in which the environment variables are set using *Terraform Cloud Variable Sets.*
 
 ---
 
@@ -367,9 +367,10 @@ You should see something like this:
 
 ![f1](readme_Images/vaultread.png)
 
-**6. Create a Vault ACL Policy**
+**6. Create a Vault ACL Policy to be used by your Terraform Cloud Deployments**
+The ACL policy is used by an independent token created in step 7 to assert that the holder of the token can generate and manage credentials for the azure role created in step 4.
 
-In HCP Vault go to Policies>>Create ACL policy and create a similar policy to below
+In HCP Vault go to Policies>>Create ACL policy and create a similar ACL policy as below
 The following policy was named *azure-spn-policy*
 ```
 # Manage secrets engines
@@ -391,12 +392,13 @@ path "auth/token/*" {
 
 
 **7. Create an independent(Orphan) token to use for Terraform Cloud deployment**
+You will need to create a Vault token that can be used by your Terraform Cloud deployments to generate dynamic Azure Service Principal credentials, think of the token as a vault 'Service Account'.
 
 It is not recommended to authenticate with Vault Provider using HCP root token for TF Cloud Deployment, use a separate token. By default, the HCP root token expires in a few hours anyway.
 
 You will need to create an independent (orphan)token to authenticate to HCP Vault using Terraform Cloud, this token won't expire when your 'root' Vault token expires:
 
-Run the following Vault Command to generate an independent token
+Run the following Vault Command to generate an independent token which
 
 
 
