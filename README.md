@@ -160,11 +160,11 @@ Refer to  the below diagram which depicts the flow of the parameters from the re
 
 ## Terraform Cloud or Terraform Enterprise
 
-**Important Note when creating a TF Cloud/Ent Workspace**: Select 'CLI-driven workflow' when creating a new workspace and ensure it is operating in 'remote' mode. Consider automating the deployment of Terraform Workspace using the official Terraform Cloud Terraform Provider - https://registry.terraform.io/providers/hashicorp/tfe/latest/docs 
+> :warning: **Important Note when creating a TF Cloud/Ent Workspace**: Select 'CLI-driven workflow' when creating a new workspace and ensure it is operating in 'remote' mode. Consider automating the deployment of Terraform Workspace using the official Terraform Cloud Terraform Provider - https://registry.terraform.io/providers/hashicorp/tfe/latest/docs 
 
 Terraform operations will run in TF Cloud and the output will be streamed to the Azure DevOps log output, as below:
 
-### Terraform Cloud - Settings
+### Terraform Cloud - Workspace Setting
 
 ![f1](readme_Images/remotemode.png)
 
