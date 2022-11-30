@@ -628,6 +628,20 @@ When deploying your pipelines in Azure DevOps, select 'Existing Azure Pipelines 
 
 ![f1](readme_Images/deployyaml.png)
 
+## Email Notifications & Slack Integration
+
+By default Azure sends approvers requests by sending an email directly to their email address. Slack integration allows you and your team to be notified directly in your messaging app so you can approve or deny runs from any device running Slack App.
+
+## Default - Email Notification
+
+![f1](readme_Images/approvers.png)
+
+## Slack - MacOS
+![f1](readme_Images/slack_censored.jpg)
+
+## Slack - Samsung Galaxy S12
+![f1](readme_Images/slacks12.jpg)
+
 # Contact
 ## Mohamed El Taier
 ### Cloud & DevOps Engineer
