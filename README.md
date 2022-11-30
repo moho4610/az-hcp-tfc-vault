@@ -325,7 +325,7 @@ vault write azure-meltaier/roles/meltaier-root ttl=1h azure_roles=-<<EOF
     ]
 EOF
 ```
-| You will need to have management groups created already. Use static secrets (Client ID and Secret) to create the management groups first, then create the below role for dynamic secret generation for other types of resource deployments. |
+| You will need to have management groups created already. Use static secrets (Client ID and Secret) to create the management groups first. |
 | --- |
 
 You can also assign roles at the Azure **Subscription Level** 
