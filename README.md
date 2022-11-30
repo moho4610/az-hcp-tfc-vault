@@ -12,7 +12,7 @@ v0.3 | 29/11/2022 | Updated readme file & added new diagrams. Public release. | 
 
 This repository contains the logic & information to guide you through building custom Azure Cloud Platform Landing Zones.
 
-Azure DevOps (YAML) will be used to orchestrate multi-stage Azure DevOps pipelines which trigger a number of Terraform CLI workflows to run in Terraform Cloud. 
+Azure DevOps (YAML) will be used to orchestrate multi-stage Azure DevOps pipelines which trigger a number of Terraform CLI workflows to run in Terraform Cloud. This repo
   
 The codebase is not based on a single opinionated super terraform module (e.g CAF AzureRM Super Module), it was instead developed in a simpler modular format to simplify the composition of new customized azure cloud landing zones. 
 
@@ -22,7 +22,7 @@ The intention of this repo is to also demonstrate the effectiveness of HCP Vault
 - resourcegroups
 - ....then you can deploy other resources accordingly.
 
-To setup the Azure DevOps tooling you will also need to have access to ['az-hcp-tfc-vault-pipelinetemplates' Repo](https://github.com/moho4610/az-hcp-tfc-vault-pipelinetemplates). Part of setting up the tooling is using a dedicated separate repository to standardise terraform resource deployments across multiple users/teams and implement approvers for change control enforcement.
+To setup the Azure DevOps tooling you will also need to have access to ['az-hcp-tfc-vault-pipelinetemplates' Repo](https://github.com/moho4610/az-hcp-tfc-vault-pipelinetemplates). Part of setting up the tooling is using a dedicated separate repository to standardise terraform resource deployments across multiple users/teams and implement global approvers for change control enforcement.
 
 # CI-CD Config
 ![f1](readme_Images/highlevelworkflow.png)
@@ -631,6 +631,9 @@ When deploying your pipelines in Azure DevOps, select 'Existing Azure Pipelines 
 ## Notifications & Slack Integration
 
 By default Azure sends approvers requests by sending an email directly to their email address. Slack integration allows you and your team to be notified directly in your messaging app so you can approve or deny runs from any device running Slack App.
+
+Use the below link to setup *Azure Pipelines* Slack App between your Azure DevOps Org and your Slack Workspace.
+https://slack.com/apps/AFH4Y66N9-azure-pipelines?tab=more_info
 
 ## Default - Email Notification
 
