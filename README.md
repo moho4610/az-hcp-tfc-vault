@@ -287,17 +287,17 @@ The following steps were followed to create a token that can be used by Terrafor
 
 `export VAULT_ADDR=https://vault-public-vault-XXXXXXX.XXXXXXXXXX.z1.hashicorp.cloud:8200`
 
-`export VAULT_TOKEN=<<Insert root token generated from your HCP Vault Token instance >`
+`export VAULT_TOKEN=<<Insert root token generated from your HCP Vault Token instance>>`
 
 `export VAULT_NAMESPACE=admin`
 
 `export ARM_TENANT_ID=<<Insert Azure Tenant ID>>`
 
-`export ARM_CLIENT_ID="Insert Azure APP ID for the Azure service principal"`
+`export ARM_CLIENT_ID=<<Insert Azure APP ID for the Azure service principal>>`
 
-`export ARM_CLIENT_SECRET="Insert Azure APP ID for the Azure service principal"`
+`export ARM_CLIENT_SECRE=<<"Insert Azure APP ID for the Azure service principal>>`
 
-`export ARM_SUBSCRIPTION_ID="Insert Subscription ID of your Azure 'Subscription Vending' Subscription"`
+`export ARM_SUBSCRIPTION_ID=<<Insert Subscription ID of your Azure 'Subscription Vending' Subscription>>`
 
 
 **2. Enable azure secret engine and mount it to default azure URL**
