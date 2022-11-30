@@ -295,7 +295,7 @@ The following steps were followed to create a token that can be used by Terrafor
 
 `export ARM_CLIENT_ID=<<Insert Azure APP ID for the Azure service principal>>`
 
-`export ARM_CLIENT_SECRE=<<"Insert Azure APP ID for the Azure service principal>>`
+`export ARM_CLIENT_SECRE=<<Insert Azure APP ID for the Azure service principal>>`
 
 `export ARM_SUBSCRIPTION_ID=<<Insert Subscription ID of your Azure 'Subscription Vending' Subscription>>`
 
