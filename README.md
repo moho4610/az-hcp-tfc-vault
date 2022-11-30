@@ -314,7 +314,7 @@ The following steps were followed to create a token that can be used by Terrafor
 
 **4. Specify the role in which you want the temporary token to hold**
 
-| You will need to have created the management groups already. Use static secrets (Client ID and Secret) to create the management groups first, then create the below role for dynamic secret generation for other types of resource deployments. |
+| You will need to have management groups created already. Use static secrets (Client ID and Secret) to create the management groups first, then create the below role for dynamic secret generation for other types of resource deployments. |
 | --- |
 
 ```
@@ -322,12 +322,39 @@ vault write azure-meltaier/roles/meltaier-root ttl=1h azure_roles=-<<EOF
     [
       {
         "role_name": "Contributor",
-        "scope": "/providers/Microsoft.Management/managementGroups/<ID>"
+        "scope": "/providers/Microsoft.Management/managementGroups/<<Insert Management Group ID>>"
       }
     ]
 EOF
 ```
+You can also assign roles at the Azure Subscription Level 
 
+```
+vault write azure/roles/edu-app ttl=1h azure_roles=-<<EOF
+    [
+      {
+        "role_name": "Contributor",
+        "scope": "/subscriptions/<<Insert Subscription ID here>>"
+      }
+    ]
+EOF
+
+
+```
+You can also assign roles at the Azure Resource Group only:
+
+```
+vault write azure/roles/edu-app ttl=1h azure_roles=-<<EOF
+    [
+      {
+        "role_name": "Contributor",
+        "scope": "/subscriptions/<<Insert Subscription ID here>/resourceGroups/<<Insert Resource Group Name Here>>"
+      }
+    ]
+EOF
+
+
+```
 
 **5. Test you can generate dynamic secrets**
 
