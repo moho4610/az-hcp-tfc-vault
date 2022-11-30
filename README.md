@@ -296,6 +296,10 @@ The following steps were followed to create a token that can be used by Terrafor
 `vault write azure-meltaier/config \tenant_id="${ARM_TENANT_ID}" subscription_id="${ARM_SUBSCRIPTION_ID}" client_id="${ARM_CLIENT_ID}" client_secret="${ARM_CLIENT_SECRET}"`
 
 **4. Specify the role in which you want the temporary token to hold**
+
+| You will need to have created the management groups already. Use static secrets (Client ID and Secret) to create the management groups first, then create the below role for dynamic secret generation for other types of resource deployments. |
+| --- |
+
 ```
 vault write azure-meltaier/roles/meltaier-root ttl=1h azure_roles=-<<EOF
     [
