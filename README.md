@@ -22,6 +22,8 @@ The intention of this repo is to also demonstrate the effectiveness of HCP Vault
 - resourcegroups
 - ....then you can deploy other resources accordingly.
 
+To setup the Azure DevOps tooling you will also need to have access to ['az-hcp-tfc-vault-pipelinetemplates' Repo](https://github.com/moho4610/az-hcp-tfc-vault-pipelinetemplates). Part of setting up the tooling is using a dedicated separate repository to standardise terraform resource deployments across multiple users/teams and implement approvers for change control enforcement.
+
 # CI-CD Config
 ![f1](readme_Images/highlevelworkflow.png)
 
