@@ -302,6 +302,7 @@ The following steps were followed to create a token that can be used by Terrafor
 
 **2. Enable azure secret engine and mount it to default azure URL**
 
+**Note:** Replace 'azure-meltaier' with a name that describes your Azure tenant. Default value is 'azure'.
 
 `vault secrets enable -path=azure-meltaier -description="Dynamic Service Principal Creation in Azure!" -max-lease-ttl=1h -default-lease-ttl=1h azure`
 
