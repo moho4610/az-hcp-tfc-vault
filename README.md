@@ -8,6 +8,28 @@ v0.2 | 05/11/2022 | Rebranded and added new diagram. Added HCP Vault config. | M
 v0.3 | 29/11/2022 | Updated readme file & added new diagrams. First Public release. | Mohamed El Taier
 v0.4 | 01/12/2022 | Updated readme file & added new diagrams. | Mohamed El Taier
 -----
+# Table of Contents
+  - [Introduction](#introduction)
+  - [Stack Intro](#stack-Intro)
+  - [CI-CD Config](#ci-cd-config)
+  - [Repo Structure](#repo-structure-for-terraform-and-yaml-filesazure-devops-pipeline)
+  - [Demo Azure Landing Zone - Reference Design](#demo-azure-landing-zone---reference-design)
+  - [Demo Vault Cloud](#demo-vault-cloud)
+  - [Technology Stack](#technology-stack)
+    - [Azure DevOps - CI Tool](#azure-devops---ci-tool)
+        - [Azure Devops - Terraform Extension](#azure-devops-terraform-extension)
+        - [Azure DevOps - Terraform Variable Group](#azure-devops-terraform-variable-group)
+        - [Azure DevOps - Release Control](#azure-devops-release-control)
+    - [Terraform Cloud or Terraform Enterprise](#terraform-cloud-or-terraform-enterprise)
+    - [Vault Cloud](#vault-cloud)
+    - [Azure Cloud Platform](#azure-cloud-platform)
+  - [Creating a pipeline](#creating-a-pipeline)
+      - [Define the Scope](#define-the-scope)
+      - [Setup your terraform workspace](#setup-your-tf-cloud-workspaces)
+      - [Set up your terraform and pipeline files](#set-up-your-terraform-and-pipeline-files)
+      - [Deploy your pipeline in Azure DevOps Dashboard](#deploy-your-pipeline-in-azure-devops-dashboard)
+  - [Notifications & Approvals By Email or Phone(Slack App)](#notifications--slack-integration)
+
 
 # Introduction
 
@@ -35,6 +57,7 @@ To setup the Azure DevOps tooling you will also need to have access to ['az-hcp-
 ![f1](readme_Images/repoconfig6.png)
 ![f1](readme_Images/repoconfig7.png)
 ![f1](readme_Images/repoconfig8.png)
+
 # Repo Structure for Terraform and YAML files(Azure DevOps Pipeline).
 ![f1](readme_Images/repoconfig3.png)
 ![f1](readme_Images/repoconfig1.png)
@@ -46,21 +69,6 @@ To setup the Azure DevOps tooling you will also need to have access to ['az-hcp-
 ![f1](readme_Images/vaultcluster.png)
 
 
-# Table of Contents
-  - [Technology Stack](#technology-stack)
-    - [Azure DevOps - CI Tool](#azure-devops---ci-tool)
-        - [Azure Devops - Terraform Extension](#azure-devops-terraform-extension)
-        - [Azure DevOps - Terraform Variable Group](#azure-devops-terraform-variable-group)
-        - [Azure DevOps - Release Control](#azure-devops-release-control)
-    - [Terraform Cloud or Terraform Enterprise](#terraform-cloud-or-terraform-enterprise)
-    - [Vault Cloud](#vault-cloud)
-    - [Azure Cloud Platform](#azure-cloud-platform)
-  - [Creating a pipeline](#creating-a-pipeline)
-      - [Define the Scope](#define-the-scope)
-      - [Setup your terraform workspace](#setup-your-tf-cloud-workspaces)
-      - [Set up your terraform and pipeline files](#set-up-your-terraform-and-pipeline-files)
-      - [Deploy your pipeline in Azure DevOps Dashboard](#deploy-your-pipeline-in-azure-devops-dashboard)
-  - [Notifications & Approvals By Email or Phone(Slack App)](#notifications--slack-integration)
 
 -----
 
