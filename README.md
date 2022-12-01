@@ -411,7 +411,7 @@ It is not recommended to authenticate with Vault Provider using HCP root token f
 
 You will need to create an independent (orphan)token to authenticate to HCP Vault using Terraform Cloud, this token won't expire when your 'root' Vault token expires:
 
-Run the following Vault Command to generate an independent token which
+Run the following Vault Command to generate an independent token which has the access rights(azure-spn-policy) to generate short-lived Azure Service Principals:
 
 
 
