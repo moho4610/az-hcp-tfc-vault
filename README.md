@@ -405,6 +405,7 @@ path "auth/token/*" {
 
 
 **7. Create an independent(Orphan) token to use for Terraform Cloud deployment**
+
 You will need to create a Vault token that can be used by your Terraform Cloud deployments to generate dynamic Azure Service Principal credentials, think of the token as a vault 'Service Account'.
 
 It is not recommended to authenticate with Vault Provider using HCP root token for TF Cloud Deployment, use a separate token. By default, the HCP root token expires in a few hours anyway.
