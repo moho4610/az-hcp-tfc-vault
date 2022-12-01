@@ -5,7 +5,8 @@ Version | Release Date | Release notes | Contributor
 --- | --- | --- | --- |
 v0.1 | 03/11/2022 | Initial Release. | Mohamed El taier 
 v0.2 | 05/11/2022 | Rebranded and added new diagram. Added HCP Vault config. | Mohamed El taier
-v0.3 | 29/11/2022 | Updated readme file & added new diagrams. Public release. | Mohamed El Taier
+v0.3 | 29/11/2022 | Updated readme file & added new diagrams. First Public release. | Mohamed El Taier
+v0.4 | 01/12/2022 | Updated readme file & added new diagrams. | Mohamed El Taier
 -----
 
 # Introduction
