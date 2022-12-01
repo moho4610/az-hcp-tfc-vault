@@ -172,6 +172,7 @@ Refer to  the below diagram which depicts the flow of the parameters from the re
 
 
 ## Terraform Cloud or Terraform Enterprise
+![f1](readme_Images/tfcloudlogo.png)
 
 > :warning: **Important Note when creating a TF Cloud/Ent Workspace**: Select 'CLI-driven workflow' when creating a new workspace and ensure it is operating in 'remote' mode. Consider automating the deployment of Terraform Workspace using the official Terraform Cloud Terraform Provider - https://registry.terraform.io/providers/hashicorp/tfe/latest/docs 
 
