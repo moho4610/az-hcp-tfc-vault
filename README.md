@@ -691,7 +691,4 @@ https://slack.com/apps/AFH4Y66N9-azure-pipelines?tab=more_info
 ## Slack - Samsung Galaxy S12
 ![f1](readme_Images/slacks12.jpg)
 
-# Contact
-## Mohamed El Taier
-### Senior Cloud & DevOps Engineer
-### mohamed.eltaier@arq.group
+
